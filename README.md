@@ -25,10 +25,20 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
+- [X] Describe the game's purpose.
+The purpose of this game is that the player tries to guess a secret number with only 8 attempts.
+- [X] Detail which bugs you found.
+THe program contained bugs such as:
+the hints were wrong
+Normal and hard difficulty were swapped.
+secret number was a string if the number was even.
+new game wouldnt stick to the diffculty for the secret number.
+the only range was 1 to 100 despite choosing diffuclty..
+new game started at 0 instead of 1
+- [X] Explain what fixes you applied.
+i set the new game to use low and high instead of 1 to 100.
+i removed the conditional making even secret numbers set as strings. i swapped the values for normal and hard in the logic python file. i also moved the code that was in the app python file to the logic file. 
 
-- [ ] Explain what fixes you applied.
 
 ## 📸 Demo
 
