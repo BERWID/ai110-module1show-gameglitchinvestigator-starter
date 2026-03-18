@@ -1,10 +1,11 @@
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
         return 1, 20
+    #bug fix normal and hard were swapped
     if difficulty == "Normal":
-        return 1, 100
-    if difficulty == "Hard":
         return 1, 50
+    if difficulty == "Hard":
+        return 1, 100
     return 1, 100
 
 
@@ -22,8 +23,8 @@ def parse_guess(raw: str):
             value = int(raw)
     except Exception:
         return False, None, "That is not a number."
-
-    return True, value, Noneactor this function from app.py into logic_utils.py")
+#syntax error fix
+    return True, value, None
 
 
 def check_guess(guess, secret):

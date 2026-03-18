@@ -8,15 +8,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+When i first ran the game i noticed the did look like it was made correctly since easy, hard, and normal mode were all the same. The logic for the hints on the guesses was backwards. The secret number kept changing and the game levels were switched for normal and hard. 
+
 ---
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-- Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-
----
+I used claude code for this  project. One correct suggestion the ai gave to me was to move some of the logic of this program from the app to logic python files. The ai didnt really give me any suggestions that were incorrect though it was trying to overengineer the bug fixes where minimal changes were needed.
 
 ## 3. Debugging and testing your fixes
 
@@ -25,17 +23,14 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
+I decided a bug was fixed because i would manually test that feature by playing the game and use different values to make sure the functionality worked correctly. one example, i had to test if the difficulty were correctly set by swtching back and forth between them in the game to see in the ranges changed. Claude didnt help me with tests once i knew what the logic was doing and fixed it i was able to manually test it in the game.
 ---
 
 ## 4. What did you learn about Streamlit and state?
-
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+The secret number kept changing because the code converted the secret number to a string on every even number attempt. I would explain that in streamlit, everytime you interact with a part of the app, it doesnt just update that part but reruns the entire python file start to finish. this makes some stuff get wiped while certain things stay the same. The change I made to make it stable was removing the if/else block that was doing the conversion and just always passing the secret directly to check_guess.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+One tool was using ai with a claude.md file and updating as i went. one thing i would do different is that i wouldnt take the ai's first suggestion because sometimes it is way more than is needed or required. This project made me more skeptical of ai generated code and solutions and that I should question the ai on what it says and gives me.
